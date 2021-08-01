@@ -1,0 +1,15 @@
+<div class='container px-5 px-sm-0'>
+  <% if @book.errors.any? %>
+    <%= @book.errors.count %> errors Prohibited This Book From Being Saved:<br/>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class='row'>
+    <%= render 'users/user', {user: @user, book: @book} %>
+    <%= render 'books/list', books: @books %>
+  </div>
+</div>
