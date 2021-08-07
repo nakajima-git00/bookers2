@@ -76,3 +76,9 @@ gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.13'
 # end
+# 2021-08-07
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
+# end
